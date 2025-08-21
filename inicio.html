@@ -1,1 +1,272 @@
-<h1> hola mundo <h1> 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Electrónica</title>
+    <link rel="stylesheet" href="css_general/inicio.css">
+</head>
+<body>
+
+   
+   <header>
+    <div class="logo">C&D Tecnología</div>
+    <input type="text" placeholder="Buscar productos..." id="searchBar">
+    <nav>
+        <a href="C:\Users\moise\OneDrive\Desktop\Moises 2025\Desarrollo Web\Tienda_de_electronica\inicio.html">Inicio</a>
+        <a href="C:\Users\moise\OneDrive\Desktop\Moises 2025\Desarrollo Web\Tienda_de_electronica\produc.html">Productos</a>
+        <a href="C:\Users\moise\OneDrive\Desktop\Moises 2025\Desarrollo Web\Tienda_de_electronica\servicios.html">Servicios</a>
+        <a href="C:\Users\moise\OneDrive\Desktop\Moises 2025\Desarrollo Web\Tienda_de_electronica\entrega.html">Entregas</a>
+        <a href="C:\Users\moise\OneDrive\Desktop\Moises 2025\Desarrollo Web\Tienda_de_electronica\contactos.html">Contactos</a>
+        <a href="C:\Users\moise\OneDrive\Desktop\Moises 2025\Desarrollo Web\Tienda_de_electronica\nostros.html">Nosotros</a>
+        <a href="#" onclick="toggleCarrito()">Carrito (<span id="cartCount">0</span>)</a>
+    </nav>
+</header>
+
+
+<div class="carrito-flotante" id="carritoFlotante">
+    <h3>Carrito de Compras</h3>
+    <ul id="cartItems" class="cart-list"></ul>
+    <p>Total: $<span id="totalPrice">0</span></p>
+    <button onclick="vaciarCarrito()">Vaciar carrito</button>
+    <div class="comprar">
+    <a href="C:\Users\moise\OneDrive\Desktop\Moises 2025\Desarrollo Web\Tienda_de_electronica\html_general\formatcompra.html"><button>comprar</button></a>
+    </div>
+    
+</div>
+
+
+
+  
+
+   
+<div class="slider">
+    <div class="slides">
+        <img src="C:\Users\moise\OneDrive\Desktop\Moises 2025\Desarrollo Web\Tienda_de_electronica\img\Electronica-que-es.webp" alt="Banner 1">
+        <img src="C:\Users\moise\OneDrive\Desktop\Moises 2025\Desarrollo Web\Tienda_de_electronica\img\estudiar-electronica-analogica-digital (2).webp" alt="Banner 2">
+        <img src="C:\Users\moise\OneDrive\Desktop\Moises 2025\Desarrollo Web\Tienda_de_electronica\img\soldering-1038517_1280.webp" alt="Banner 3">
+    </div>
+</div>
+
+
+   
+    <section>
+        <h2>Novedades</h2>
+        <div class="productos" id="novedades">
+            <div class="producto">
+                <img src="C:\Users\moise\OneDrive\Desktop\Moises 2025\Desarrollo Web\Tienda_de_electronica\img\resistencias-de-filamento-de-carbon-14w-1-valor-10-unidades.jpg" alt="Imagen producto">
+                <h4>Resistencias de Filamento de Carbon 1</h4>
+                <p>L.15</p>
+                <button onclick="agregarAlCarrito(1)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="C:\Users\moise\OneDrive\Desktop\Moises 2025\Desarrollo Web\Tienda_de_electronica\img\cable-utp-1-metro.jpg" alt="Imagen producto">
+                <h4>CABLE UTP</h4>
+                <p>L.25</p>
+                <button onclick="agregarAlCarrito(2)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="C:\Users\moise\OneDrive\Desktop\Moises 2025\Desarrollo Web\Tienda_de_electronica\img\fusible-de-vidrio-01-20a-250v-5x20mm.jpg" alt="Imagen producto">
+                <h4>Fusible de Vidrio</h4>
+                <p>L.77</p>
+                <button onclick="agregarAlCarrito(3)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="C:\Users\moise\OneDrive\Desktop\Moises 2025\Desarrollo Web\Tienda_de_electronica\img\jumpers-de-conexion-dunpont-hh-mm-mh-40-hilos-20cm.jpg" alt="Imagen producto">
+                <h4>Jumpers de Conexion</h4>
+                <p>L.130</p>
+                <button onclick="agregarAlCarrito(4)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="C:\Users\moise\OneDrive\Desktop\Moises 2025\Desarrollo Web\Tienda_de_electronica\img\diodos-led-5mm-10-unidades.jpg" alt="Imagen producto">
+                <h4>Diodos LED 5mm</h4>
+                <p>L.5</p>
+                <button onclick="agregarAlCarrito(5)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="C:\Users\moise\OneDrive\Desktop\Moises 2025\Desarrollo Web\Tienda_de_electronica\img\capacitores-electroliticos-1-valor-01-1000uf-5-unidades.jpg" alt="Imagen producto">
+                <h4>Capacitores Electroliticos</h4>
+                <p>L.77</p>
+                <button onclick="agregarAlCarrito(6)">Agregar al carrito</button>
+            </div>
+        </div>
+    </section>
+    
+
+
+<div class="slider">
+    <div class="slides">
+        <img src="C:\Users\moise\OneDrive\Desktop\Moises 2025\Desarrollo Web\Tienda_de_electronica\img\technology-1850021_1280.webp" alt="Banner 1">
+        <img src="C:\Users\moise\OneDrive\Desktop\Moises 2025\Desarrollo Web\Tienda_de_electronica\img\soldering-iron-4359947_1280.webp" alt="Banner 2">
+        <img src="C:\Users\moise\OneDrive\Desktop\Moises 2025\Desarrollo Web\Tienda_de_electronica\img\resistance-5722984_1280.webp" alt="Banner 3">
+    </div>
+</div>
+
+
+   
+    <section>
+        <h2>Ofertas</h2>
+        <div class="productos" id="ofertas">
+            <div class="producto">
+                <img src="C:\Users\moise\OneDrive\Desktop\Moises 2025\Desarrollo Web\Tienda_de_electronica\img\provador-de-cortocircuito-en-autos-duoyi-dy25(3).jpg" alt="Imagen producto">
+                <h4>Probador de cortocircuito</h4>
+                <p>L.340</p>
+                <button onclick="agregarAlCarrito(7)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="C:\Users\moise\OneDrive\Desktop\Moises 2025\Desarrollo Web\Tienda_de_electronica\img\detector-de-cables-bajo-pared-5-en-1-hw430.jpg" alt="Imagen producto">
+                <h4>Detector de cables bajo pared </h4>
+                <p>L.700</p>
+                <button onclick="agregarAlCarrito(8)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="C:\Users\moise\OneDrive\Desktop\Moises 2025\Desarrollo Web\Tienda_de_electronica\img\filamento-tpu-esun-175mm-1kg-negro(4).jpg" alt="Imagen producto">
+                <h4>FILAMENTO TPU ESUN</h4>
+                <p>L.120</p>
+                <button onclick="agregarAlCarrito(9)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="C:\Users\moise\OneDrive\Desktop\Moises 2025\Desarrollo Web\Tienda_de_electronica\img\resistencias-1-valor-12w-5-10-unidades.jpg" alt="Imagen producto">
+                <h4>Resistencias 1 valor</h4>
+                <p>L.15</p>
+                <button onclick="agregarAlCarrito(10)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="C:\Users\moise\OneDrive\Desktop\Moises 2025\Desarrollo Web\Tienda_de_electronica\img\puerto-usb-tipo-micro-b-30-de-4-pines.jpg" alt="Imagen producto">
+                <h4>Puerto USB tipo micro</h4>
+                <p>L.69</p>
+                <button onclick="agregarAlCarrito(11)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="C:\Users\moise\OneDrive\Desktop\Moises 2025\Desarrollo Web\Tienda_de_electronica\img\adpatador-de-energia-ac-macho-y-hembra-c19-a-c20.jpg" alt="Imagen producto">
+                <h4>Adpatador de energia AC macho y hembra</h4>
+                <p>L.100</p>
+                <button onclick="agregarAlCarrito(12)">Agregar al carrito</button>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="productos" id="masVendidos">
+            <div class="producto">
+                <img src="C:\Users\moise\OneDrive\Desktop\Moises 2025\Desarrollo Web\Tienda_de_electronica\img\mini-motor-con-encoder-9-12v.jpg" alt="Imagen producto">
+                <h4>Mini motor con Encoder</h4>
+                <p>L.120</p>
+                <button onclick="agregarAlCarrito(13)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="C:\Users\moise\OneDrive\Desktop\Moises 2025\Desarrollo Web\Tienda_de_electronica\img\fusible-termico-de-ceramica-rf-250v.jpg" alt="Imagen producto">
+                <h4>Fusible termico de ceramica</h4>
+                <p>L.20</p>
+                <button onclick="agregarAlCarrito(14)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="C:\Users\moise\OneDrive\Desktop\Moises 2025\Desarrollo Web\Tienda_de_electronica\img\bateria-recargable-bak-18650-36v-2500mah-30a.jpg" alt="Imagen producto">
+                <h4>Bateria recargable</h4>
+                <p>L.260</p>
+                <button onclick="agregarAlCarrito(15)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="C:\Users\moise\OneDrive\Desktop\Moises 2025\Desarrollo Web\Tienda_de_electronica\img\conector-separador-bnc-tres-vias-hembra-y-macho.jpg" alt="Imagen producto">
+                <h4>Conector separador BNC tres vías Hembra y Macho</h4>
+                <p>L.40</p>
+                <button onclick="agregarAlCarrito(16.2)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="C:\Users\moise\OneDrive\Desktop\Moises 2025\Desarrollo Web\Tienda_de_electronica\img\terminal-de-bateria-9v-.jpg" alt="Imagen producto">
+                <h4>Terminal de batería 9V</h4>
+                <p>L.15</p>
+                <button onclick="agregarAlCarrito(18)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="C:\Users\moise\OneDrive\Desktop\Moises 2025\Desarrollo Web\Tienda_de_electronica\img\cable-de-2-3-4-lineas.jpg" alt="Imagen producto">
+                <h4>Cable de 2-3-4 Lineas</h4>
+                <p>L.26</p>
+                <button onclick="agregarAlCarrito(19)">Agregar al carrito</button>
+            </div>
+        </div>
+    </section>
+    
+<div class="slider">
+    <div class="slides">
+        <img src="C:\Users\moise\OneDrive\Desktop\Moises 2025\Desarrollo Web\Tienda_de_electronica\img\circuit-board-6560489_1280.webp" alt="Banner 1">
+        <img src="C:\Users\moise\OneDrive\Desktop\Moises 2025\Desarrollo Web\Tienda_de_electronica\img\electrician-499799_1280.webp" alt="Banner 2">
+        <img src="C:\Users\moise\OneDrive\Desktop\Moises 2025\Desarrollo Web\Tienda_de_electronica\img\soldering-7897827_1280.webp" alt="Banner 3">
+    </div>
+</div>
+
+    
+    <section>
+        <h2>Más Vendidos</h2>
+        <div class="productos" id="masVendidos">
+            <div class="producto">
+                <img src="C:\Users\moise\OneDrive\Desktop\Moises 2025\Desarrollo Web\Tienda_de_electronica\img\impresora-3d-creality-ender-5-plus-35x35x40cm.jpg" alt="Imagen producto">
+                <h4>Impresora 3D</h4>
+                <p>L.7000</p>
+                <button onclick="agregarAlCarrito(20)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="C:\Users\moise\OneDrive\Desktop\Moises 2025\Desarrollo Web\Tienda_de_electronica\img\robot-humanoide-15dof-ensamblalo-tu-mismo-kit-diy.jpg" alt="Imagen producto">
+                <h4>Robot humanoide</h4>
+                <p>L.3600</p>
+                <button onclick="agregarAlCarrito(21)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="C:\Users\moise\OneDrive\Desktop\Moises 2025\Desarrollo Web\Tienda_de_electronica\img\kit-amplificador-de-senal-celular-2g3g4g-tigo-y-claro-850190017002100mhz-lintratek-aa23-cpa.jpg" alt="Imagen producto">
+                <h4>Kit amplificador de señal</h4>
+                <p>L.400</p>
+                <button onclick="agregarAlCarrito(22)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="C:\Users\moise\OneDrive\Desktop\Moises 2025\Desarrollo Web\Tienda_de_electronica\img\kit-impresora-3d-mks-robin-stm32.jpg" alt="Imagen producto">
+                <h4>Kit Impresora 3D MKS Robin STM32</h4>
+                <p>L.500</p>
+                <button onclick="agregarAlCarrito(23)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="C:\Users\moise\OneDrive\Desktop\Moises 2025\Desarrollo Web\Tienda_de_electronica\img\proyecto-electronica-cnc-hazlo-tu-mismo-diy.jpg" alt="Imagen producto">
+                <h4>Proyecto electronica</h4>
+                <p>L.500</p>
+                <button onclick="agregarAlCarrito(24)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="C:\Users\moise\OneDrive\Desktop\Moises 2025\Desarrollo Web\Tienda_de_electronica\img\adaptador-de-red-de-usb-20-a-rj45.jpg" alt="Imagen producto">
+                <h4>usb</h4>
+                <p>L.40</p>
+                <button onclick="agregarAlCarrito(25)">Agregar al carrito</button>
+            </div>
+        </div>
+    </section>
+    
+
+    <footer>
+    <div class="footer-container">
+        <div class="footer-form">
+            <input type="email" placeholder="Correo">
+            <button>Suscribirse</button>
+        </div>
+        
+        <div class="footer-links">
+            <a href="#">Producto</a>
+            <a href="#">Sobre nosotros</a>
+        </div>
+        
+        <div class="footer-redes">
+            <a href="#">Redes</a>
+            <a href="#">Redes</a>
+            <a href="#">Redes</a>
+        </div>
+        
+        <div class="footer-logo">
+            <img src="img_procducto/Tesla,_Inc.-Logomark-Black-Logo.wine.svg" alt="Logo">
+        </div>
+    </div>
+</footer>
+
+
+    <script src="js.general/inicio.js"></script>
+</body>
+</html>
+<div class="bgm-player" aria-label="Reproductor de música de fondo">
+  <audio id="bgm" src="img_procducto/Aaron Hibell - i feel lost _sub español - v a r i e t y (1) (online-audio-converter.com).mp3" loop preload="metadata" controls></audio>
+  <span class="bgm-hint"></span>
+</div>

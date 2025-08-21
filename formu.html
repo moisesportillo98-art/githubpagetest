@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contacto</title>
+    <link rel="stylesheet" href="css_general/formu.css">
+</head>
+<body>
+
+<h2>Formulario de Contacto</h2>
+
+<form id="formulario" action="mailto:tu-correo@ejemplo.com" method="POST" enctype="text/plain">
+    <label>Nombre completo:</label>
+    <input type="text" name="nombre" required>
+
+    <label>Correo electrónico:</label>
+    <input type="email" name="correo" required>
+
+    <label>País:</label>
+    <input type="text" name="pais" required>
+
+    <label>Edad:</label>
+    <input type="number" name="edad" min="1" required>
+
+    <label>Ciudad:</label>
+    <input type="text" name="ciudad" required>
+
+    <button type="submit">Enviar</button>
+</form>
+
+<script>
+document.getElementById("formulario").addEventListener("submit", function(event) {
+    event.preventDefault(); 
+    alert("Formulario enviado correctamente ");
+    window.location.href = "inicio.html"; 
+});
+</script>
+
+</body>
+</html>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+(function(){
+    emailjs.init("TU_USER_ID_DE_EMAILJS"); 
+})();
+
+document.getElementById("formularioRegistro").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    emailjs.sendForm("TU_SERVICE_ID", "TU_TEMPLATE_ID", this)
+        .then(function() {
+            alert("Correo enviado correctamente");
+        }, function(error) {
+            alert("Error al enviar el correo: " + JSON.stringify(error));
+        });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Electrónica</title>
+    <link rel="stylesheet" href="css_general/produc.css">
+</head>
+<body>
+
+
+<header>
+    <div class="logo">C&D Tecnología</div>
+    <input type="text" placeholder="Buscar productos..." id="searchBar">
+    <nav>
+        <a href="inicio.html">Inicio</a>
+        <a href="produc.html">Productos</a>
+        <a href="C:\Users\moise\OneDrive\Desktop\Moises 2025\Desarrollo Web\Tienda_de_electronica\servicios.html">Servicios</a>
+        <a href="C:\Users\moise\OneDrive\Desktop\Moises 2025\Desarrollo Web\Tienda_de_electronica\entrega.html">Entregas</a>
+        <a href="C:\Users\moise\OneDrive\Desktop\Moises 2025\Desarrollo Web\Tienda_de_electronica\contactos.html">Contactos</a>
+        <a href="C:\Users\moise\OneDrive\Desktop\Moises 2025\Desarrollo Web\Tienda_de_electronica\nosotros">Nosotros</a>
+        <a href="#" onclick="toggleCarrito()">Carrito (<span id="cartCount">0</span>)</a>
+    </nav>
+</header>
+
+
+<div class="carrito-flotante" id="carritoFlotante">
+    <h3>Carrito de Compras</h3>
+    <ul id="cartItems" class="cart-list"></ul>
+    <p>Total: $<span id="totalPrice">0</span></p>
+    <button onclick="vaciarCarrito()">Vaciar carrito</button>
+</div>
+
+
+<div class="contenedor-productos">
+  
+    <aside class="categorias">
+        <h3>Productos de categorías</h3>
+        <ul>
+            <li><a href="#" onclick="mostrarProductos('componentesElectronicos')">Componentes Electrónicos</a></li>
+            <li><a href="#" onclick="mostrarProductos('placasDesarrollo')">Placas de desarrollo</a></li>
+            <li><a href="#" onclick="mostrarProductos('tecnologiaEducativa')">Tecnología Educativa</a></li>
+            <li><a href="#" onclick="mostrarProductos('motoresBombas')">Motores y Bombas</a></li>
+            <li><a href="#" onclick="mostrarProductos('placasElectronicas')">Placas Electrónicas</a></li>
+            <li><a href="#" onclick="mostrarProductos('conectoresInterruptores')">Conectores, Interruptores y Botones</a></li>
+            <li><a href="#" onclick="mostrarProductos('cajasVentiladores')">Cajas y Ventiladores Plásticos</a></li>
+            <li><a href="#" onclick="mostrarProductos('fuentesEnergia')">Fuentes de energía</a></li>
+        </ul>
+    </aside>
+
+    <main class="lista-productos"> 
+        <h2 id="tituloCategoria">Productos de inicio</h2>
+        <div class="grid-productos" id="productosContainer">
+            <div id="detalleProducto" class="detalle-producto" style="display:none;">
+    <button onclick="cerrarDetalles()">Cerrar</button>
+    <img id="detalleImg" src="" alt="">
+    <h3 id="detalleNombre"></h3>
+    <p id="detallePrecio"></p>
+    <p id="detalleDescripcion"></p>
+</div>
+            
+        </div>
+    </main>
+</div>
+
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-form">
+            <input type="email" placeholder="Correo">
+            <button>Suscribirse</button>
+        </div>
+        
+        <div class="footer-links">
+            <a href="C:\Users\moise\OneDrive\Desktop\Moises 2025\Desarrollo Web\Tienda_de_electronica\produc.html">Producto</a>
+            <a href="C:\Users\moise\OneDrive\Desktop\Moises 2025\Desarrollo Web\Tienda_de_electronica\inicio.html">inicio</a>
+        </div>
+        
+        <div class="footer-redes">
+            <a href="#">facebook</a>
+            <a href="#">instagram</a>
+            <a href="#">whatsapp</a>
+        </div>
+        
+        <div class="footer-logo">
+            <img src="C:\Users\moise\OneDrive\Desktop\Moises 2025\Desarrollo Web\Tienda_de_electronica\img_procducto\Tesla,_Inc.-Logomark-Black-Logo.wine.svg" alt="Logo">
+        </div>
+    </div>
+</footer>
+
+<script src="js.general/produc.js"></script>
+</body>
+</html>

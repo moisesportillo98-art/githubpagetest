@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>compra</title>
+     <link rel="stylesheet" href="C:\Users\moise\OneDrive\Desktop\Moises 2025\Desarrollo Web\Tienda_de_electronica\html_general\css_general\formatcompra.css">
+</head>
+<body>
+    
+
+
+
+<div id="formularioCompra" class="form-compra oculto">
+    <h3>Formulario de Pago</h3>
+    <form id="checkoutForm">
+        <label>Nombre Completo:</label>
+        <input type="text" required><br>
+
+        <label>Número de Tarjeta:</label>
+        <input type="text" maxlength="16" required><br>
+
+        <label>Fecha de Expiración:</label>
+        <input type="month" required><br>
+
+        <label>CVV:</label>
+        <input type="password" maxlength="3" required><br>
+
+        <label>Dirección de Envío:</label>
+        <input type="text" required><br>
+
+        <button type="submit">Concretar Compra</button>
+        <button type="button" onclick="cancelarCompra()">Cancelar</button>
+    </form>
+</div>
+</body>
+</html>

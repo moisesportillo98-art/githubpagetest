@@ -1,0 +1,409 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f8f8f8;
+}
+
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #1e3c72;
+    color: white;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+}
+
+header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+header input {
+    padding: 5px;
+    width: 200px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.carrito {
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+
+.slider {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.slides {
+    display: flex;
+    width: 300%;
+    animation: cambio 9s infinite;
+}
+
+.slides img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+ .comprar {
+ padding: 5px;
+    width: 200px;
+}
+
+
+
+
+
+
+
+
+
+@keyframes cambio {
+    0% { margin-left: 0; }
+    30% { margin-left: 0; }
+    35% { margin-left: -100%; }
+    65% { margin-left: -100%; }
+    70% { margin-left: -200%; }
+    100% { margin-left: -200%; }
+}
+
+
+main {
+    padding: 20px;
+}
+
+.productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.producto {
+    background: white;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 320px; 
+}
+
+.producto img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.producto h4 {
+    min-height: 40px; 
+    margin: 5px 0;
+}
+
+.producto p {
+    margin: 5px 0;
+}
+
+.producto button {
+    background: #1e3c72;
+    color: white;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+    margin-top: auto;
+}
+
+
+
+
+.carrito-flotante {
+    position: fixed;
+    top: 70px;
+    right: -300px; 
+    width: 250px;
+    max-height: 70vh;
+    background: white;
+    border: 1px solid #ccc;
+    padding: 15px;
+    transition: right 0.3s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.carrito-flotante.abierto {
+   right: 10px;
+}
+.carrito-flotante::-webkit-scrollbar {
+    width: 6px;
+}
+.carrito-flotante::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+}
+
+.carrito-flotante::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+.cart-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cart-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f9f9f9;
+    margin-bottom: 8px;
+    padding: 8px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+.cart-list .qty-controls {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.qty-btn {
+    background: #1e3c72;
+    border: none;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.qty-btn:hover {
+    background: #16305a;
+}
+
+.remove-btn {
+    background: #756466;
+    border: none;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    margin-left: 10px;
+    transition: background 0.2s;
+}
+
+.remove-btn:hover {
+    background: #555;
+}
+
+.cart-list li span {
+    flex: 1;
+}
+
+
+
+
+footer {
+    background-color: #1e3c72; 
+    padding: 20px;
+    color: white;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-form input {
+    padding: 5px;
+    border: none;
+    outline: none;
+}
+
+.footer-form button {
+    padding: 6px 12px;
+    background-color: white;
+    color: #1e3c72;
+    border: none;
+    cursor: pointer;
+}
+
+.footer-form button:hover {
+    background-color: #ddd;
+}
+
+.footer-links a,
+.footer-redes a {
+    background-color: #16305a; 
+    color: white;
+    padding: 6px 12px;
+    margin: 0 5px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.footer-links a:hover,
+.footer-redes a:hover {
+    background-color: #0f2240;
+}
+
+.footer-logo img {
+    width: 60px;
+    height: auto;
+}
+
+
+@media (max-width: 768px) {
+    .productos {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 15px;
+    }
+
+    .producto {
+        height: auto; 
+    }
+
+    .producto img {
+        height: 120px;
+    }
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header input {
+        width: 90%;
+        margin-top: 10px;
+    }
+
+    header nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    header nav a {
+        margin: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .productos {
+        grid-template-columns: 1fr;
+    }
+
+    .producto img {
+        height: 200px;
+    }
+}
+
+.bgm-player {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 9999;
+  background: rgba(30, 60, 114, 0.92); 
+  backdrop-filter: blur(4px);
+  border-radius: 12px;
+  padding: 10px 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+
+.bgm-player audio {
+  width: 180px;         
+  height: 28px;          
+}
+
+
+.bgm-hint {
+  color: #fff;
+  font-size: 0.85rem;
+  user-select: none;
+}
+
+
+@media (max-width: 480px) {
+  .bgm-player {
+    right: 8px;
+    bottom: 8px;
+    padding: 8px 10px;
+    border-radius: 10px;
+  }
+  .bgm-player audio {
+    width: 150px;
+    height: 26px;
+  }
+  .bgm-hint {
+    display: none; 
+  }
+}
+
+.bgm-player {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 9999;
+  background: rgba(30, 60, 114, 0.92); 
+  backdrop-filter: blur(4px);
+  border-radius: 12px;
+  padding: 10px 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+
+.bgm-player audio {
+  width: 180px;          
+  height: 28px;          
+}
+
+
+.bgm-hint {
+  color: #fff;
+  font-size: 0.85rem;
+  user-select: none;
+}
+
+@media (max-width: 480px) {
+  .bgm-player {
+    right: 8px;
+    bottom: 8px;
+    padding: 8px 10px;
+    border-radius: 10px;
+  }
+  .bgm-player audio {
+    width: 150px;
+    height: 26px;
+  }
+  .bgm-hint {
+    display: none; 
+  }
+}
